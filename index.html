@@ -56,12 +56,15 @@
     .gameCard h2 {
       color: #4b9bff;
     }
-    .gameCard a {
-      color: #7a5cff;
-      text-decoration: none;
-      display: inline-block;
+    .gameCard button {
+      padding: 10px;
+      font-size: 16px;
+      background-color: #7a5cff;
+      color: white;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
       margin-top: 10px;
-      font-weight: bold;
     }
   </style>
 </head>
@@ -137,7 +140,7 @@
             ${iconUrl ? `<img src="${iconUrl}" alt="Game Icon" style="width: 128px; height: 128px;">` : ''}
             ${placeThumbUrl ? `<img src="${placeThumbUrl}" alt="Game Thumbnail" style="width: 100%; max-width: 480px;">` : ''}
             <p><strong>Description:</strong> ${description || 'No description available.'}</p>
-            <a href="https://www.roblox.com/games/${rootPlaceId}" target="_blank">View Game Page</a>
+            <button onclick="window.open('https://www.roblox.com/games/${rootPlaceId}', '_blank')">Open Game Page</button>
           `;
 
           container.appendChild(card);
@@ -150,4 +153,3 @@
   </script>
 </body>
 </html>
-
